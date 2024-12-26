@@ -1,6 +1,6 @@
 import React from "react";
-import fbQR from "../assets/fb.png";
-import lineQR from "../assets/line.png";
+// import fbQR from "../assets/fb.png";
+// import lineQR from "../assets/line.png";
 
 interface PDFTemplateProps {
   date: string;
@@ -80,13 +80,13 @@ const PDFTemplate: React.FC<PDFTemplateProps> = ({ date, dayOfWeek }) => {
               <div className="text-center">
                 <p className="mb-2 text-xl">Line ไลน์</p>
                 <div className="w-[130px] h-[130px] flex items-center justify-center">
-                  <img src={lineQR} alt="Line QR Code" className="w-full h-full object-contain" />
+                  <img src="https://puroid.yoke-th.me/share/line.png" alt="Line QR Code" className="w-full h-full object-contain" />
                 </div>
               </div>
               <div className="text-center">
                 <p className="mb-2 text-lg">Facebook เฟสบุ้ค</p>
                 <div className="w-[130px] h-[130px] flex items-center justify-center">
-                  <img src={fbQR} alt="Facebook QR Code" className="w-full h-full object-contain" />
+                  <img src="https://puroid.yoke-th.me/share/fb.png" alt="Facebook QR Code" className="w-full h-full object-contain" />
                 </div>
               </div>
             </div>
