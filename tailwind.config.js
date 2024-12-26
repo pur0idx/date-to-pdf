@@ -19,6 +19,9 @@ export default {
         },
       },
     },
+    fontFamily: {
+      'ibm-th': ['IBM Plex Sans Thai', 'serif'],
+    },
   },
   darkMode: "class",
   plugins: [nextui()],

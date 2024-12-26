@@ -20,7 +20,7 @@ const GenerateButton: React.FC<GenerateButtonProps> = ({ onClick, disabled, isGe
       size="lg"
       startContent={!isGenerating && <FileDown className="h-5 w-5" />}
     >
-      {isGenerating ? 'Generating PDF...' : 'Generate PDF'}
+      {isGenerating ? 'สร้าง PDF...' : 'สร้าง PDF'}
     </Button>
   );
 };

@@ -40,7 +40,7 @@ const PDFGenerator: React.FC = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 sm:px-6 py-4 sm:py-6">
+    <div className="container mx-auto px-4 sm:px-6 py-4 sm:py-6 font-ibm-th">
       <div className="flex flex-col lg:flex-row gap-6 max-w-5xl mx-auto">
         <div className="flex-1">
           <Card className="shadow-xl">
@@ -49,9 +49,9 @@ const PDFGenerator: React.FC = () => {
                 <Calendar className="w-6 h-6 text-primary" />
               </div>
               <div>
-                <h2 className="text-xl font-semibold">PDF Generator</h2>
+                <h2 className="text-xl font-semibold">สร้าง PDF ใบปิดร้าน</h2>
                 <p className="text-sm text-default-500">
-                  Select a date to preview and generate your PDF
+                  เลือกวันที่ต้องการ และสร้างไฟล์ PDF
                 </p>
               </div>
             </CardHeader>

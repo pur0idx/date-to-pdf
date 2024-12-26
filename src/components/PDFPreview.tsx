@@ -23,7 +23,7 @@ const PDFPreview: React.FC<PDFPreviewProps> = ({ date, dayOfWeek }) => {
             <div className="relative w-full" style={{ paddingTop: '70.66%' }}>
               <div className="absolute inset-0 flex items-center justify-center">
                 <div style={{ 
-                  transform: 'scale(0.43)',
+                  transform: 'scale(0.3)',
                   transformOrigin: 'center',
                   width: '842px',
                   height: '595px'

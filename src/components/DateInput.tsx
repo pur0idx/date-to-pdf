@@ -39,7 +39,7 @@ const DateInput: React.FC<DateInputProps> = ({ date, dayOfWeek, onChange }) => {
       <Popover isOpen={isOpen} onOpenChange={setIsOpen} placement="bottom">
         <PopoverTrigger>
           <Input
-            label="Select Date"
+            label="เลือกวันที่เปิด"
             placeholder="Click to select a date"
             value={formattedDate}
             readOnly
