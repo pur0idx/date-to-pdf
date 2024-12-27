@@ -1,20 +1,10 @@
 import React from "react";
-// import fbQR from "../assets/fb.png";
-// import lineQR from "../assets/line.png";
 
 interface PDFTemplateProps {
   date: string;
   dayOfWeek: string;
+  isPDF?: boolean;
 }
-
-type EnglishDay =
-  | "monday"
-  | "tuesday"
-  | "wednesday"
-  | "thursday"
-  | "friday"
-  | "saturday"
-  | "sunday";
 
 interface DayMapping {
   [key: string]: string;
@@ -50,7 +40,7 @@ function dayBiggestSize(thaiDay: string): string{
   return daySize[thaiDay];
 }
 
-const PDFTemplate: React.FC<PDFTemplateProps> = ({ date, dayOfWeek }) => {
+const PDFTemplate: React.FC<PDFTemplateProps> = ({ date, dayOfWeek, isPDF = false }) => {
   const formattedDate = new Date(date).toLocaleDateString("en-US", {
     day: "numeric",
   });
@@ -71,7 +61,18 @@ const PDFTemplate: React.FC<PDFTemplateProps> = ({ date, dayOfWeek }) => {
             }}
           >
             <div className="whitespace-nowrap">
-              เปิด<span className="underline underline-offset-[15px]">{thaiDay}ที่&nbsp;{formattedDate}</span>
+              <span
+                className={!isPDF ? "underline underline-offset-[15px]" : ""}
+                style={{
+                  ...(isPDF && {
+                    borderBottom: '6px solid black',
+                    paddingBottom: '4px',
+                    display: 'inline-block'
+                  })
+                }}
+              >
+                {thaiDay}ที่&nbsp;{formattedDate}
+              </span>
             </div>
           </div>
           <div

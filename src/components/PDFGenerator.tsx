@@ -82,7 +82,7 @@ const PDFGenerator: React.FC = () => {
       </div>
 
       <div id="pdf-content" className="hidden">
-        <PDFTemplate date={date} dayOfWeek={dayOfWeek} />
+        <PDFTemplate date={date} dayOfWeek={dayOfWeek} isPDF={true} />
       </div>
     </div>
   );
