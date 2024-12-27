@@ -36,6 +36,20 @@ function convertDayToThai(englishDay: string): string {
   return dayMapping[day] || englishDay;
 }
 
+function dayBiggestSize(thaiDay: string): string{
+  const daySize: { [key: string]: string } = {
+    "วันจันทร์": "110px",
+    "วันอังคาร": "105px",
+    "วันพุธ": "115px",
+    "วันพฤหัสบดี": "85px",
+    "วันศุกร์": "110px",
+    "วันเสาร์": "110px",
+    "วันอาทิตย์": "105px",
+  }
+
+  return daySize[thaiDay];
+}
+
 const PDFTemplate: React.FC<PDFTemplateProps> = ({ date, dayOfWeek }) => {
   const formattedDate = new Date(date).toLocaleDateString("en-US", {
     day: "numeric",
@@ -48,14 +62,16 @@ const PDFTemplate: React.FC<PDFTemplateProps> = ({ date, dayOfWeek }) => {
       <div className="w-full px-8">
         <div className="max-w-4xl mx-auto">
           <div
-            className="text-[85px] tracking-tight font-bold text-center mb-4"
+            className="tracking-tight font-bold text-center mb-7"
             style={{
               fontFamily: "IBM Plex Sans Thai, Serif",
               textRendering: "optimizeLegibility",
+              fontSize: dayBiggestSize(thaiDay),
+              // lineHeight: "1.2",
             }}
           >
-            <div>
-              เปิด<span className="underline underline-offset-5">{thaiDay}ที่&nbsp;&nbsp;{formattedDate}</span>
+            <div className="whitespace-nowrap">
+              เปิด<span className="underline underline-offset-[15px]">{thaiDay}ที่&nbsp;{formattedDate}</span>
             </div>
           </div>
           <div
