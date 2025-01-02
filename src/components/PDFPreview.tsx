@@ -17,7 +17,7 @@ const PDFPreview: React.FC<PDFPreviewProps> = ({ date, dayOfWeek }) => {
         <CardBody className="p-4">
           <div className="flex items-center gap-2 mb-3">
             <Eye className="w-4 h-4 text-default-500" />
-            <h3 className="text-sm font-medium text-default-700">Preview</h3>
+            <h3 className="text-sm font-medium text-default-700">ตัวอย่าง</h3>
           </div>
           <div className="border rounded-lg overflow-hidden bg-white shadow-inner">
             <div className="relative w-full" style={{ paddingTop: '70.66%' }}>
@@ -34,7 +34,7 @@ const PDFPreview: React.FC<PDFPreviewProps> = ({ date, dayOfWeek }) => {
             </div>
           </div>
           <p className="text-xs text-default-500 mt-3 text-center">
-            Preview of your PDF
+            ตัวอย่าง PDF
           </p>
         </CardBody>
       </Card>
